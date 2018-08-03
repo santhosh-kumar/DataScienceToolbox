@@ -3,15 +3,19 @@ This module defines analysis abstraction
 """
 from abc import ABCMeta, abstractmethod
 import os
+import sys
 
 from logger.logger import Logger
 from exceptions.precondition import Precondition
+from exceptions.exceptions import UnsupportedPythongException
+
 
 class BaseAnalysis:
     """
     Abstraction for Analysis
     """
     __metaclass__ = ABCMeta
+
     @abstractmethod
     def __init__(self, analysis_name, log_file_path, output_folder_path):
         """Init
@@ -22,6 +26,9 @@ class BaseAnalysis:
         Raises:
             None
         """
+        if sys.version_info[0] < 3:
+            raise UnsupportedPythongException("Python Version must be >= 3.0")
+
         Precondition.is_string(analysis_name, "Invalid analysis_name")
         Precondition.is_string(log_file_path, "Invalid log_file_path")
         Precondition.is_string(output_folder_path, "Invalid output_folder_path")

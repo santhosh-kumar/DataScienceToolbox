@@ -3,6 +3,7 @@ This file defines a wrapper for Precondition
 """
 from exceptions.exceptions import PreconditionException
 
+
 class Precondition:
     """
     Precondition Utilities are used for checking precondition 
@@ -28,7 +29,7 @@ class Precondition:
         Raises:
             PreconditionException
         """
-        if not variable:
+        if not isinstance(variable, str):
             raise PreconditionException(message)
 
     @staticmethod

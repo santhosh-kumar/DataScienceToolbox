@@ -5,11 +5,13 @@ from abc import ABCMeta, abstractmethod
 
 import numpy as np
 
+
 class Dataset:
     """
     Abstraction for dataset
     """
     __metaclass__ = ABCMeta
+
     @abstractmethod
     def load(self, dataset_file_path, delimiter=','):
         """Loads the input dataset

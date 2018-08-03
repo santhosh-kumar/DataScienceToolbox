@@ -7,6 +7,7 @@ import logging
 from exceptions.precondition import Precondition
 from exceptions.assertion import Assertion
 
+
 class Logger:
     """
     Class for Logger - a wrapper around the python logging
@@ -42,10 +43,10 @@ class Logger:
         Raises:
             None
         """
-        if level is None:
+        if level:
             level = self.LEVEL_INFO
 
-        if message is not None:
+        if message:
             print(message)
             if self.logger_impl is not None:
                 if level == self.LEVEL_WARNING:

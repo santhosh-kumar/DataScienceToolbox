@@ -2,13 +2,12 @@
 This file defines a CSV Dataset processing class
 """
 import csv
-import logging
-import re
 
 import numpy as np
 
 from dataset.dataset import Dataset
 from exceptions.precondition import Precondition
+
 
 class CsvDataset(Dataset):
     """
@@ -38,13 +37,13 @@ class CsvDataset(Dataset):
         Raises:
             None
         """
-        if self.logger != None:
+        if self.logger:
             self.logger.trace("Loading dataset: {0} with a delimiter \"{1}\" ...".format(csv_file_path, delimiter))
         
-        with open(csv_file_path,'r') as csv_file:
+        with open(csv_file_path, 'rb') as csv_file:
             data_iter = csv.reader(csv_file, 
-                                   delimiter = delimiter, 
-                                   quotechar = '"')
+                                   delimiter=delimiter,
+                                   quotechar='"')
             data = [data for data in data_iter]
         self.data_array = np.asarray(data)
 
@@ -60,6 +59,5 @@ class CsvDataset(Dataset):
         # find the index of the field_name in data_array
         field_list = self.data_array[0, :].tolist()
         field_index = field_list.index(field_name)
-        field_data = self.data_array[1:,field_index]
+        field_data = self.data_array[1:, field_index]
         return field_data.astype(field_dtype)
-    

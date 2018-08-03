@@ -3,6 +3,7 @@ This file defines a wrapper for Assertion
 """
 from exceptions.exceptions import AssertionException
 
+
 class Assertion:
     """
     Assertion Utilities are used for checking precondition 

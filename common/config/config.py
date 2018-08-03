@@ -6,6 +6,7 @@ import configparser as cp
 from exceptions.precondition import Precondition
 from exceptions.assertion import Assertion
 
+
 class Config:
     """
     Class for Config Management
@@ -58,4 +59,3 @@ class Config:
             None
         """
         return self.config.get(section_name, field_name)
-        

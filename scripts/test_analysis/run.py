@@ -17,7 +17,7 @@ from analysis.base_analysis import BaseAnalysis
 from dataset.csv_dataset import CsvDataset
 from plot.plot import Plot
 from utils.string_utils import *
-from utils.url_utils import *
+
 
 class TestAnalysis(BaseAnalysis):
     """
@@ -38,9 +38,9 @@ class TestAnalysis(BaseAnalysis):
             None
         """
         BaseAnalysis.__init__(self, self.ANALYSIS_NAME, log_file_path, output_folder_path)
-        
+
         self.dataset_csv_file_path = os.path.abspath(dataset_csv_file_path)
-        self.dataset               = CsvDataset(dataset_csv_file_path, self.logger)
+        self.dataset = CsvDataset(dataset_csv_file_path, self.logger)
 
         self.logger.trace('Finished Loading Test Analysis Dataset...')
 
@@ -69,20 +69,22 @@ class TestAnalysis(BaseAnalysis):
         """
         pass
 
+
 # main
 if __name__ == "__main__":
     try:
         # argument parser
-        parser = ArgParser()
-        
+        parser = ArgParser(sys.argv[1:])
+
         # parse the config
         config = Config(parser.get_arguments().config)
-        
+
         # set the variables from config
-        dataset_csv_file_path   = config.get_field("input_output_settings", "DATASET_CSV_FILE_PATH")
-        output_folder_path      = config.get_field("input_output_settings", "OUTPUT_FOLDER_PATH")
-        log_file_path           = config.get_field("input_output_settings", "LOG_FILE_PATH")
-        should_show_plots       = StringUtils.string_to_boolean(config.get_field("input_output_settings", "SHOULD_SHOW_PLOTS"))
+        dataset_csv_file_path = config.get_field("input_output_settings", "DATASET_CSV_FILE_PATH")
+        output_folder_path = config.get_field("input_output_settings", "OUTPUT_FOLDER_PATH")
+        log_file_path = config.get_field("input_output_settings", "LOG_FILE_PATH")
+        should_show_plots = StringUtils.str_to_boolean(
+            config.get_field("input_output_settings", "SHOULD_SHOW_PLOTS"))
 
         # create test analysis
         test_analysis = TestAnalysis(dataset_csv_file_path,

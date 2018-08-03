@@ -4,6 +4,8 @@ This file defines an argument parsing class
 import argparse as ap
 
 from config.config import Config
+from exceptions.exceptions import ArgumentParserFailureException
+
 
 class ArgParser:
     """
@@ -20,20 +22,23 @@ class ArgParser:
     INFO_RUN = "Analysis to Run"
     INFO_CONFIG = "Config File Path"
 
-    def __init__(self):
+    def __init__(self, args=None):
         """Init
+            args - Arguments passed
         """
         parser = ap.ArgumentParser()
 
-        parser.add_argument(self.FLAG_RUN, self.FLAG_RUN_VERBOSE, 
+        parser.add_argument(self.FLAG_RUN, self.FLAG_RUN_VERBOSE,
                             default=self.DEFAULT_RUN_VALUE,
                             help=self.INFO_RUN)
 
-        parser.add_argument(self.FLAG_CONFIG, self.FLAG_CONFIG_VERBOSE, 
+        parser.add_argument(self.FLAG_CONFIG, self.FLAG_CONFIG_VERBOSE,
                             default=Config.DEFAULT_CONFIG_FILE_NAME,
                             help=self.INFO_CONFIG)
-
-        self.args = parser.parse_args()
+        try:
+            self.args = parser.parse_args(args)
+        except Exception as ex:
+            raise ArgumentParserFailureException(str(ex))
 
     def get_arguments(self):
         """Get arguments
@@ -42,4 +47,3 @@ class ArgParser:
             None
         """
         return self.args
-        

@@ -42,3 +42,15 @@ use -h to print help
 use -r to run
 use -c to specify a config file (by default it uses the one in configs folder)
 
+
+### Contact ###
+[1] Santhoshkumar Sunderrajan( santhoshkumar.sunderrajan@gmail.com)
+
+**Website:** http://santhoshsunderrajan.com/
+
+[2] Aravind Sunderrajan (aravind.sunderrajan@gmail.com)
+
+
+### Disclaimer ###
+We may have used some good codes from various sources, please feel free to notify me if you find a piece of code that I need to acknowledge.
+
