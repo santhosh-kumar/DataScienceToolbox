@@ -1,6 +1,8 @@
 """
 Unit Test for arg_parser
 """
+import os
+
 from unittest import TestCase
 
 from config.config import Config
@@ -20,7 +22,11 @@ class TestConfig(TestCase):
         Raises:
             None
         """
-        config = Config('config.cfg')
+
+        __location__ = os.path.realpath(
+        os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+        config = Config(os.path.join(__location__, 'config.cfg'))
 
         dataset_csv_file_path = config.get_field("input_output_settings", "DATASET_CSV_FILE_PATH")
         output_folder_path = config.get_field("input_output_settings", "OUTPUT_FOLDER_PATH")
@@ -28,7 +34,7 @@ class TestConfig(TestCase):
         should_show_plots = StringUtils.str_to_boolean(
             config.get_field("input_output_settings", "SHOULD_SHOW_PLOTS"))
 
-        self.assertEquals(dataset_csv_file_path, '../../data/test_analysis.csv')
-        self.assertEquals(output_folder_path, 'output/test_analysis')
-        self.assertEquals(log_file_path, 'logs/log.txt')
-        self.assertEquals(should_show_plots, False)
+        self.assertEqual(dataset_csv_file_path, '../../data/test_analysis.csv')
+        self.assertEqual(output_folder_path, 'output/test_analysis')
+        self.assertEqual(log_file_path, 'logs/log.txt')
+        self.assertEqual(should_show_plots, False)
