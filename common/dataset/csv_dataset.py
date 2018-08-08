@@ -40,12 +40,23 @@ class CsvDataset(Dataset):
         if self.logger:
             self.logger.trace("Loading dataset: {0} with a delimiter \"{1}\" ...".format(csv_file_path, delimiter))
         
-        with open(csv_file_path, 'rb') as csv_file:
+        with open(csv_file_path, 'r') as csv_file:
             data_iter = csv.reader(csv_file, 
                                    delimiter=delimiter,
                                    quotechar='"')
             data = [data for data in data_iter]
         self.data_array = np.asarray(data)
+
+    def get_field_names(self):
+        """Get fields names
+        Args:
+        Raises:
+            None
+        """
+        Precondition.is_true(isinstance(self.data_array, np.ndarray), "Invalid data_array")
+        # find the index of the field_name in data_array        
+        field_names = self.data_array[0, :].tolist()
+        return field_names
 
     def get_field(self, field_name, field_dtype=np.str_):
         """Get a field from the data_array and convert to specified data_type
@@ -55,9 +66,9 @@ class CsvDataset(Dataset):
         Raises:
             None
         """
-        Precondition.is_true(self.data_array, "Invalid data_array")
+        Precondition.is_true(isinstance(self.data_array, np.ndarray), "Invalid data_array")
         # find the index of the field_name in data_array
-        field_list = self.data_array[0, :].tolist()
+        field_list = self.get_field_names()
         field_index = field_list.index(field_name)
         field_data = self.data_array[1:, field_index]
         return field_data.astype(field_dtype)
