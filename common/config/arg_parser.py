@@ -11,16 +11,16 @@ class ArgParser:
     """
     Class for Argument Parsing
     """
-    FLAG_RUN = "-r"
-    FLAG_CONFIG = "-c"
+    FLAG_RUN = '-r'
+    FLAG_CONFIG = '-c'
 
-    FLAG_RUN_VERBOSE = "--run"
-    FLAG_CONFIG_VERBOSE = "--config"
+    FLAG_RUN_VERBOSE = '--run'
+    FLAG_CONFIG_VERBOSE = '--config'
 
-    DEFAULT_RUN_VALUE = "all"
+    DEFAULT_RUN_VALUE = 'all'
 
-    INFO_RUN = "Analysis to Run"
-    INFO_CONFIG = "Config File Path"
+    INFO_RUN = 'Analysis to Run'
+    INFO_CONFIG = 'Config File Path'
 
     def __init__(self, args=None):
         """Init

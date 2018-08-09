@@ -25,7 +25,7 @@ class TestConfig(TestCase):
         __location__ = os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
-        config = Config(os.path.join(__location__, 'config.cfg'))
+        config = Config(os.path.join(__location__, 'test_config.cfg'))
 
         dataset_csv_file_path = config.get_field("input_output_settings", "DATASET_CSV_FILE_PATH")
         output_folder_path = config.get_field("input_output_settings", "OUTPUT_FOLDER_PATH")

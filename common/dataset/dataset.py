@@ -24,6 +24,15 @@ class Dataset:
         pass
 
     @abstractmethod
+    def get_field_names(self):
+        """Get fields names
+        Args:
+        Raises:
+            None
+        """
+        pass
+
+    @abstractmethod
     def get_field(self, field_name, field_dtype=np.str_):
         """Get a field from the data_array and convert to specified data_type
         Args:

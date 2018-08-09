@@ -13,6 +13,7 @@ class CsvDataset(Dataset):
     """
     A class to load and access csv dataset and it's fields
     """
+
     def __init__(self, dataset_csv_file_path, logger=None, should_load=True):
         """Init
         Args:
@@ -22,7 +23,7 @@ class CsvDataset(Dataset):
         Raises:
             None
         """
-        Precondition.is_string(dataset_csv_file_path, "Invalid dataset_csv_file_path")
+        Precondition.is_string(dataset_csv_file_path, 'Invalid dataset_csv_file_path')
         self.dataset_csv_file_path = dataset_csv_file_path
         self.logger = logger
         self.data_array = []
@@ -38,10 +39,10 @@ class CsvDataset(Dataset):
             None
         """
         if self.logger:
-            self.logger.trace("Loading dataset: {0} with a delimiter \"{1}\" ...".format(csv_file_path, delimiter))
-        
+            self.logger.trace('Loading dataset: {0} with a delimiter \"{1}\" ...'.format(csv_file_path, delimiter))
+
         with open(csv_file_path, 'r') as csv_file:
-            data_iter = csv.reader(csv_file, 
+            data_iter = csv.reader(csv_file,
                                    delimiter=delimiter,
                                    quotechar='"')
             data = [data for data in data_iter]
@@ -53,7 +54,7 @@ class CsvDataset(Dataset):
         Raises:
             None
         """
-        Precondition.is_true(isinstance(self.data_array, np.ndarray), "Invalid data_array")
+        Precondition.is_true(isinstance(self.data_array, np.ndarray), 'Invalid data_array')
         # find the index of the field_name in data_array        
         field_names = self.data_array[0, :].tolist()
         return field_names
@@ -66,7 +67,7 @@ class CsvDataset(Dataset):
         Raises:
             None
         """
-        Precondition.is_true(isinstance(self.data_array, np.ndarray), "Invalid data_array")
+        Precondition.is_true(isinstance(self.data_array, np.ndarray), 'Invalid data_array')
         # find the index of the field_name in data_array
         field_list = self.get_field_names()
         field_index = field_list.index(field_name)

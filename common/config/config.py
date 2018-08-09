@@ -11,7 +11,7 @@ class Config:
     """
     Class for Config Management
     """
-    DEFAULT_CONFIG_FILE_NAME = "config.cfg"
+    DEFAULT_CONFIG_FILE_NAME = 'config.cfg'
 
     def __init__(self, config_file_path=DEFAULT_CONFIG_FILE_NAME):
         """Init
@@ -20,7 +20,7 @@ class Config:
         Raises:
             None
         """
-        Precondition.is_string(config_file_path, "Invalid config_file_path")
+        Precondition.is_string(config_file_path, 'Invalid config_file_path')
         self.config_file_path = config_file_path
         self.config = self.load(self.config_file_path)
 
@@ -34,17 +34,17 @@ class Config:
         if config_file_path is None:
             config_file_path = self.DEFAULT_CONFIG_FILE_NAME
         try:
-            with open(config_file_path, "r") as config_file:
+            with open(config_file_path, 'r') as config_file:
                 config_data = config_file.read()
         except IOError:
-            print('Config File: "' + config_file_path + '" does not exist.')
+            print('Config File: '" + config_file_path + "' does not exist.')
             raise
 
-        Assertion.is_true(config_data, "Invalid config_data")
-            
+        Assertion.is_true(config_data, 'Invalid config_data')
+
         # print the config data
         print(config_data)
-        
+
         # parse the config
         config = cp.RawConfigParser(allow_no_value=True)
         config.read_string(config_data)

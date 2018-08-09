@@ -27,11 +27,11 @@ class BaseAnalysis:
             None
         """
         if sys.version_info[0] < 3:
-            raise UnsupportedPythongException("Python Version must be >= 3.0")
+            raise UnsupportedPythongException('Python Version must be >= 3.0')
 
-        Precondition.is_string(analysis_name, "Invalid analysis_name")
-        Precondition.is_string(log_file_path, "Invalid log_file_path")
-        Precondition.is_string(output_folder_path, "Invalid output_folder_path")
+        Precondition.is_string(analysis_name, 'Invalid analysis_name')
+        Precondition.is_string(log_file_path, 'Invalid log_file_path')
+        Precondition.is_string(output_folder_path, 'Invalid output_folder_path')
 
         self.analysis_name = analysis_name
         self.logger = Logger.create(os.path.abspath(log_file_path), self.analysis_name)

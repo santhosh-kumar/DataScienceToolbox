@@ -1,6 +1,7 @@
 """
 This module defines string utilities
 """
+from exceptions.assertion import Assertion
 
 
 class StringUtils(object):
@@ -16,6 +17,7 @@ class StringUtils(object):
         Raises:
             None
         """
+        Assertion.is_string(string_value, 'Invalid String Value')
         return string_value.lower() in ("yes", "true", "t", "1")
 
     @staticmethod

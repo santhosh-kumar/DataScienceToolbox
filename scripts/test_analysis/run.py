@@ -80,11 +80,11 @@ if __name__ == "__main__":
         config = Config(parser.get_arguments().config)
 
         # set the variables from config
-        dataset_csv_file_path = config.get_field("input_output_settings", "DATASET_CSV_FILE_PATH")
-        output_folder_path = config.get_field("input_output_settings", "OUTPUT_FOLDER_PATH")
-        log_file_path = config.get_field("input_output_settings", "LOG_FILE_PATH")
+        dataset_csv_file_path = config.get_field('input_output_settings', 'DATASET_CSV_FILE_PATH')
+        output_folder_path = config.get_field('input_output_settings', 'OUTPUT_FOLDER_PATH')
+        log_file_path = config.get_field('input_output_settings', 'LOG_FILE_PATH')
         should_show_plots = StringUtils.str_to_boolean(
-            config.get_field("input_output_settings", "SHOULD_SHOW_PLOTS"))
+            config.get_field('input_output_settings', 'SHOULD_SHOW_PLOTS'))
 
         # create test analysis
         test_analysis = TestAnalysis(dataset_csv_file_path,

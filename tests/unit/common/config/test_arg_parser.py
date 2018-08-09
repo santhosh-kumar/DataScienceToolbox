@@ -19,5 +19,5 @@ class TestArgParser(TestCase):
         Raises:
             None
         """
-        arg_parser = ArgParser(['--config', 'config.cfg'])
-        self.assertEqual(arg_parser.get_arguments().config, 'config.cfg')
+        arg_parser = ArgParser(['--config', 'test_config.cfg'])
+        self.assertEqual(arg_parser.get_arguments().config, 'test_config.cfg')
