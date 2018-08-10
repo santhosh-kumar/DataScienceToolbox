@@ -19,7 +19,7 @@ class TestLogger(TestCase):
         """setUp
 
         Args:
-            self - TestBaseAnalysis
+            self - TestLogger
         Raises:
             None
         """
@@ -29,7 +29,7 @@ class TestLogger(TestCase):
         """tearDown
 
         Args:
-            self - TestBaseAnalysis
+            self - TestLogger
         Raises:
             None
         """

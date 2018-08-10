@@ -2,8 +2,9 @@
 This module contains different plot utilities
 """
 import matplotlib.pyplot as plt
-
 import numpy as np
+
+from exceptions.precondition import Precondition
 
 
 class Plot:
@@ -28,26 +29,32 @@ class Plot:
                     x_label,
                     y_label,
                     title,
-                    save_file_path,
+                    save_file_path=None,
                     should_show=True,
                     bar_width=0.35,
                     alpha=0.4,
                     color='b'):
         """Generates a histogram for all unique values in the data_list
         Args:
-            data_list   - input data_list
-            x_label     - x axis label for the plot
-            y_label     - y axis label for the plot
-            title       - title for the plot
-            should_show - should show the plot 
-            bar_width   - width of the bar
-            alpha       - opacity of the bar
-            color       - color of the bar
+            data_list       - input data_list
+            x_label         - x axis label for the plot
+            y_label         - y axis label for the plot
+            title           - title for the plot
+            save_file_path  - path to save the plot file
+            should_show     - should show the plot
+            bar_width       - width of the bar
+            alpha           - opacity of the bar
+            color           - color of the bar
         Raises:
             None
         Note:
             TODO - bar_width becomes large if the bar count becomes low (need to fix)
         """
+        Precondition.is_array(data_list, 'Invalid data_list')
+        Precondition.is_string(x_label, 'Invalid x_label')
+        Precondition.is_string(y_label, 'Invalid y_label')
+        Precondition.is_string(title, 'Invalid title')
+
         # get unique elements and its counts
         unique, counts = np.unique(data_list, return_counts=True)
 
@@ -83,25 +90,31 @@ class Plot:
             x_label,
             y_label,
             title,
-            save_file_path,
+            save_file_path=None,
             should_show=True,
             bar_width=0.35,
             alpha=0.4,
             color='b'):
         """Generates a bar chart with values in the data_list1 (on x-axis) and data_list2 (on y-axis)
         Args:
-            data_list1  - input data_list1
-            data_list2  - input data_list2
-            x_label     - x axis label for the plot
-            y_label     - y axis label for the plot
-            title       - title for the plot
-            should_show - should show the plot 
-            bar_width   - width of the bar
-            alpha       - opacity of the bar
-            color       - color of the bar
+            data_list1      - input data_list1
+            data_list2      - input data_list2
+            x_label         - x axis label for the plot
+            y_label         - y axis label for the plot
+            title           - title for the plot
+            save_file_path  - path to save the plot file
+            should_show     - should show the plot
+            bar_width       - width of the bar
+            alpha           - opacity of the bar
+            color           - color of the bar
         Raises:
             None
         """
+        Precondition.is_array(data_list1, 'Invalid data_list1')
+        Precondition.is_array(data_list2, 'Invalid data_list2')
+        Precondition.is_string(x_label, 'Invalid x_label')
+        Precondition.is_string(y_label, 'Invalid y_label')
+        Precondition.is_string(title, 'Invalid title')
 
         # get the indexes
         index = np.arange(len(data_list1))
@@ -135,7 +148,7 @@ class Plot:
                     x_label,
                     y_label,
                     title,
-                    save_file_path,
+                    save_file_path=None,
                     should_show=True,
                     top_items_count=-1,
                     horizontal=False,
@@ -150,6 +163,7 @@ class Plot:
             x_label             - x axis label for the plot
             y_label             - y axis label for the plot
             title               - title for the plot
+            save_file_path      - path to save the plot file
             should_show         - should show the plot 
             top_items_count     - top items to use from data_list1
             plot_width          - width of the plot
@@ -160,6 +174,12 @@ class Plot:
         Raises:
             None
         """
+        Precondition.is_array(data_list1, 'Invalid data_list1')
+        Precondition.is_array(data_list2, 'Invalid data_list2')
+        Precondition.is_string(x_label, 'Invalid x_label')
+        Precondition.is_string(y_label, 'Invalid y_label')
+        Precondition.is_string(title, 'Invalid title')
+
         # get top elements by count in data_list1
         unique1, counts1 = np.unique(data_list1, return_counts=True)
         sorted_indexes = sorted(range(len(counts1)), key=lambda k: counts1[k], reverse=True)
