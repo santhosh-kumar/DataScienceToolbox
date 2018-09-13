@@ -16,7 +16,11 @@ class TestAssertion(TestCase):
         """Test is_* methods
 
         Args:
-            self - TestAssertion
+            self: TestAssertion
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -32,7 +36,11 @@ class TestAssertion(TestCase):
         """Test is_* methods exceptions
 
         Args:
-            self - TestAssertion
+            self: TestAssertion
+
+        Returns:
+            None
+
         Raises:
             None
         """

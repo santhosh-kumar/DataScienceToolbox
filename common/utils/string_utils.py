@@ -11,9 +11,14 @@ class StringUtils(object):
 
     @staticmethod
     def str_to_boolean(string_value):
-        """Returns boolean of the input string
+        """Convert string to boolean
+
         Args:
-            string_value - input boolean string
+            string_value: input boolean string
+
+        Returns:
+            boolean value of the given string
+
         Raises:
             None
         """
@@ -22,9 +27,14 @@ class StringUtils(object):
 
     @staticmethod
     def to_str(bytes_or_str):
-        """Returns an instance of str
+        """Converts to string if the input is a byte
+
         Args:
-            bytes_or_str - bytes or str
+            bytes_or_str: bytes or str
+
+        Returns:
+            string value of the given input
+
         Raises:
             None
         """
@@ -36,9 +46,14 @@ class StringUtils(object):
 
     @staticmethod
     def to_bytes(bytes_or_str):
-        """Returns an instance of bytes
+        """Converts to bytes if the input is a string
+
         Args:
-            bytes_or_str - instance of bytes
+            bytes_or_str: instance of bytes
+
+        Returns:
+            byte value of the given input
+
         Raises:
             None
         """

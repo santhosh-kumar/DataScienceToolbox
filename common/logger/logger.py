@@ -20,10 +20,15 @@ class Logger:
 
     def __init__(self, log_file_path, logger_impl, logger_name=None):
         """Init
+
         Args:
-            log_file_path   - absolute path to the log file
-            logger_impl     - logger implementation object
-            logger_name   - name of the log file
+            log_file_path: absolute path to the log file
+            logger_impl: logger implementation object
+            logger_name: name of the log file
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -36,9 +41,14 @@ class Logger:
 
     def trace(self, message=None, level=None):
         """Log a message
+
         Args:
-            message    - string to be logged
-            level      - level for logging
+            message: string to be logged
+            level: level for logging
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -61,10 +71,15 @@ class Logger:
     @staticmethod
     def create(log_file_path, logger_name=None, level=None):
         """Creates the log file
+
         Args:
-            log_file_path   - absolute path to the log file
-            logger_name     - name of the logger
-            level           - logging level
+            log_file_path: absolute path to the log file
+            logger_name: name of the logger
+            level: logging level
+
+        Returns:
+            None
+
         Raises:
             None
         """

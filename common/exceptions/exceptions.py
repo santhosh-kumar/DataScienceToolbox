@@ -11,9 +11,14 @@ class PreconditionException(Exception):
 
     def __init__(self, message):
         """Init PreconditionException
+
         Args:
-            self     - PreconditionException
-            message  - message
+            self: PreconditionException
+            message: message
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -22,7 +27,11 @@ class PreconditionException(Exception):
     def __str__(self):
         """To String
         Args:
-            self - PreconditionException
+            self: PreconditionException
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -37,9 +46,14 @@ class AssertionException(Exception):
 
     def __init__(self, message):
         """Init AssertionException
+
         Args:
-            self     - AssertionException
-            message  - message
+            self: AssertionException
+            message: message
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -47,8 +61,13 @@ class AssertionException(Exception):
 
     def __str__(self):
         """To String
+
         Args:
-            self - AssertionException
+            self: AssertionException
+
+        Returns:
+            Exception message as a string.
+
         Raises:
             None
         """
@@ -62,9 +81,14 @@ class UnsupportedPythongException(Exception):
 
     def __init__(self, message):
         """Init UnsupportedPythongException
+
         Args:
-            self     - UnsupportedPythongException
-            message  - message
+            self: UnsupportedPythongException
+            message: message
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -72,8 +96,13 @@ class UnsupportedPythongException(Exception):
 
     def __str__(self):
         """To String
+
         Args:
-            self - UnsupportedPythongException
+            self: UnsupportedPythongException
+
+        Returns:
+            Exception message as a string.
+
         Raises:
             None
         """

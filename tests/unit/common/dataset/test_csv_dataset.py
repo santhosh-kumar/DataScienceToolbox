@@ -19,9 +19,14 @@ class TestCsvDataset(TestCase):
         """Test Create
 
         Args:
-            self - TestCsvDataset
+            self: TestCsvDataset
+
+        Returns:
+            None
+
         Raises:
             None
+
         """
         __location__ = os.path.realpath(
             os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -39,7 +44,11 @@ class TestCsvDataset(TestCase):
         """Test Load
 
         Args:
-            self - TestCsvDataset
+            self: TestCsvDataset
+
+        Returns:
+            None
+
         Raises:
             None
         """

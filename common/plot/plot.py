@@ -15,8 +15,13 @@ class Plot:
     @staticmethod
     def get_random_colors(count):
         """Generates a list of random colors for the plot
+
         Args:
-            count   - color count to generate
+            count: color count to generate
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -35,18 +40,24 @@ class Plot:
                     alpha=0.4,
                     color='b'):
         """Generates a histogram for all unique values in the data_list
+
         Args:
-            data_list       - input data_list
-            x_label         - x axis label for the plot
-            y_label         - y axis label for the plot
-            title           - title for the plot
-            save_file_path  - path to save the plot file
-            should_show     - should show the plot
-            bar_width       - width of the bar
-            alpha           - opacity of the bar
-            color           - color of the bar
+            data_list: input data_list
+            x_label: x axis label for the plot
+            y_label: y axis label for the plot
+            title: title for the plot
+            save_file_path: path to save the plot file
+            should_show: should show the plot
+            bar_width: width of the bar
+            alpha: opacity of the bar
+            color: color of the bar
+
+        Returns:
+            None
+
         Raises:
             None
+
         Note:
             TODO - bar_width becomes large if the bar count becomes low (need to fix)
         """
@@ -96,17 +107,22 @@ class Plot:
             alpha=0.4,
             color='b'):
         """Generates a bar chart with values in the data_list1 (on x-axis) and data_list2 (on y-axis)
+
         Args:
-            data_list1      - input data_list1
-            data_list2      - input data_list2
-            x_label         - x axis label for the plot
-            y_label         - y axis label for the plot
-            title           - title for the plot
-            save_file_path  - path to save the plot file
-            should_show     - should show the plot
-            bar_width       - width of the bar
-            alpha           - opacity of the bar
-            color           - color of the bar
+            data_list1: input data_list1
+            data_list2: input data_list2
+            x_label:  axis label for the plot
+            y_label: y axis label for the plot
+            title: title for the plot
+            save_file_path: path to save the plot file
+            should_show: should show the plot
+            bar_width: width of the bar
+            alpha: opacity of the bar
+            color: color of the bar
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -157,20 +173,25 @@ class Plot:
                     bar_width=0.35,
                     alpha=1):
         """Generates a stacked bar chart with for unique labels in data_list1 and stacked by types in data_list2
+
         Args:
-            data_list1          - input data_list1 (main data)
-            data_list2          - input data_list2 (sub-data for stacking)
-            x_label             - x axis label for the plot
-            y_label             - y axis label for the plot
-            title               - title for the plot
-            save_file_path      - path to save the plot file
-            should_show         - should show the plot 
-            top_items_count     - top items to use from data_list1
-            plot_width          - width of the plot
-            plot_height         - height of the plot
-            bar_width           - width of the bar
-            alpha               - opacity of the bar
-            color               - color of the bar
+            data_list1: input data_list1 (main data)
+            data_list2: input data_list2 (sub-data for stacking)
+            x_label: x axis label for the plot
+            y_label: y axis label for the plot
+            title: title for the plot
+            save_file_path: path to save the plot file
+            should_show: should show the plot
+            top_items_count: top items to use from data_list1
+            plot_width: width of the plot
+            plot_height: height of the plot
+            bar_width: width of the bar
+            alpha: opacity of the bar
+            color: color of the bar
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -256,3 +277,14 @@ class Plot:
         # show plot if needed
         if should_show:
             plt.show()
+
+    @staticmethod
+    def line(data_list,
+             x_label,
+             y_label,
+             title,
+             save_file_path=None,
+             should_show=True,
+             alpha=0.4,
+             color='b'):
+        pass

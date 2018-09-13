@@ -16,7 +16,11 @@ class TestPrecondition(TestCase):
         """Test is_* methods
 
         Args:
-            self - TestAssertion
+            self: TestPrecondition
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -32,7 +36,11 @@ class TestPrecondition(TestCase):
         """Test is_* methods exceptions
 
         Args:
-            self - TestAssertion
+            self: TestPrecondition
+
+        Returns:
+            None
+
         Raises:
             None
         """

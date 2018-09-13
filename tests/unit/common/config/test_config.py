@@ -18,7 +18,11 @@ class TestConfig(TestCase):
         """Test Create
 
         Args:
-            self - TestConfig
+            self: TestConfig
+
+        Returns:
+            None
+
         Raises:
             None
         """

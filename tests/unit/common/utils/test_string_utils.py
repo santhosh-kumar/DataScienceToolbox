@@ -16,7 +16,11 @@ class TestStringUtils(TestCase):
         """Test str_to_boolean
 
         Args:
-            self - TestStringUtils
+            self: TestStringUtils
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -40,7 +44,11 @@ class TestStringUtils(TestCase):
         """Test to_str
 
         Args:
-            self - TestStringUtils
+            self: TestStringUtils
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -51,7 +59,11 @@ class TestStringUtils(TestCase):
         """Test to_str
 
         Args:
-            self - TestStringUtils
+            self: TestStringUtils
+
+        Returns:
+            None
+
         Raises:
             None
         """

@@ -24,7 +24,15 @@ class ArgParser:
 
     def __init__(self, args=None):
         """Init
-            args - Arguments passed
+
+        Args:
+            args: Arguments passed
+
+        Returns:
+            None
+
+        Raises:
+            None
         """
         parser = ap.ArgumentParser()
 
@@ -42,7 +50,12 @@ class ArgParser:
 
     def get_arguments(self):
         """Get arguments
+
         Args:
+
+        Returns:
+            Arguments
+
         Raises:
             None
         """

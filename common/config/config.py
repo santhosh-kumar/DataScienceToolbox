@@ -15,8 +15,13 @@ class Config:
 
     def __init__(self, config_file_path=DEFAULT_CONFIG_FILE_NAME):
         """Init
+
         Args:
-            config_file_path - absolute path to the config file
+            config_file_path: absolute path to the config file
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -26,8 +31,13 @@ class Config:
 
     def load(self, config_file_path=None):
         """Loads the input config file
+
         Args:
-            csv_file_path - absolute path to the config file
+            config_file_path: absolute path to the config file
+
+        Returns:
+            Config loaded from the file
+
         Raises:
             None
         """
@@ -52,9 +62,13 @@ class Config:
 
     def get_field(self, section_name, field_name):
         """Get a field from the config
+
         Args:
-            section_name  - name of the section for the field
-            field_name    - name of the field to be returned
+            section_name: name of the section for the field
+            field_name: name of the field to be returned
+
+        Returns:
+                Config field for the given field_name
         Raises:
             None
         """

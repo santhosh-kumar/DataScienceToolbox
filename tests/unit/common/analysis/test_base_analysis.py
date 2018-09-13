@@ -19,9 +19,14 @@ class DummyBaseAnalysis(BaseAnalysis):
                  output_folder_path,
                  log_file_path):
         """Test Analysis
+
         Args:
-            output_folder_path      - output folder path
-            log_file_path           - path to the log file
+            output_folder_path : output folder path
+            log_file_path: path to the log file
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -31,7 +36,11 @@ class DummyBaseAnalysis(BaseAnalysis):
         """Executes the Test
 
         Args:
-            should_show - should plot results
+            should_show: should plot results
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -49,7 +58,8 @@ class TestBaseAnalysis(TestCase):
         """setUp
 
         Args:
-            self - TestBaseAnalysis
+            self: TestBaseAnalysis
+
         Raises:
             None
         """
@@ -59,7 +69,11 @@ class TestBaseAnalysis(TestCase):
         """tearDown
 
         Args:
-            self - TestBaseAnalysis
+            self: TestBaseAnalysis
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -76,7 +90,11 @@ class TestBaseAnalysis(TestCase):
         """Test Create
 
         Args:
-            self - TestBaseAnalysis
+            self: TestBaseAnalysis
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -86,7 +104,11 @@ class TestBaseAnalysis(TestCase):
         """Test Create with invalid output folder
 
         Args:
-            self - TestBaseAnalysis
+            self: TestBaseAnalysis
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -106,7 +128,11 @@ class TestBaseAnalysis(TestCase):
         """Test Create with invalid log file path
 
         Args:
-            self - TestBaseAnalysis
+            self: TestBaseAnalysis
+
+        Returns:
+            None
+
         Raises:
             None
         """

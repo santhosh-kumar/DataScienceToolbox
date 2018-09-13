@@ -20,7 +20,11 @@ class TestPlot(TestCase):
         """setUp
 
         Args:
-            self - TestPlot
+            self: TestPlot
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -30,7 +34,11 @@ class TestPlot(TestCase):
         """tearDown
 
         Args:
-            self - TestPlot
+            self: TestPlot
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -41,7 +49,11 @@ class TestPlot(TestCase):
         """Test hist_unique
 
         Args:
-            self - TestLogger
+            self: TestPlot
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -102,7 +114,11 @@ class TestPlot(TestCase):
         """Test bar
 
         Args:
-            self - TestLogger
+            self: TestPlot
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -180,7 +196,11 @@ class TestPlot(TestCase):
         """Test test_bar_stacked
 
         Args:
-            self - TestLogger
+            self: TestPlot
+
+        Returns:
+            None
+
         Raises:
             None
         """

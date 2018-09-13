@@ -16,10 +16,15 @@ class CsvDataset(Dataset):
 
     def __init__(self, dataset_csv_file_path, logger=None, should_load=True):
         """Init
+
         Args:
-            dataset_csv_file_path   - absolute path to the csv file
-            logger                  - shared logger (could be null)
-            should_load             - should the dataset (default = True)
+            dataset_csv_file_path: absolute path to the csv file
+            logger: shared logger (could be null)
+            should_load: should the dataset (default = True)
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -32,9 +37,14 @@ class CsvDataset(Dataset):
 
     def load(self, csv_file_path, delimiter=','):
         """Loads the input csv file
+
         Args:
-            csv_file_path - absolute path to the csv file
-            delimiter     - delimited (default ',')
+            csv_file_path: absolute path to the csv file
+            delimiter: delimited (default ',')
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -51,6 +61,10 @@ class CsvDataset(Dataset):
     def get_field_names(self):
         """Get fields names
         Args:
+
+        Returns:
+            Field names in the dataset
+
         Raises:
             None
         """
@@ -62,8 +76,12 @@ class CsvDataset(Dataset):
     def get_field(self, field_name, field_dtype=np.str_):
         """Get a field from the data_array and convert to specified data_type
         Args:
-            field_name    - name of the field to be returned
-            field_dtype   - datatype to be used
+            field_name: name of the field to be returned
+            field_dtype: datatype to be used
+
+        Returns:
+            An NP array of field values for the given field name
+
         Raises:
             None
         """

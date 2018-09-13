@@ -15,7 +15,11 @@ class TestArgParser(TestCase):
         """Test Create
 
         Args:
-            self - TestArgParser
+            self: TestArgParser
+
+        Returns:
+            None
+
         Raises:
             None
         """

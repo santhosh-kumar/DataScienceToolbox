@@ -19,10 +19,15 @@ class BaseAnalysis:
     @abstractmethod
     def __init__(self, analysis_name, log_file_path, output_folder_path):
         """Init
+
         Args:
-            analysis_name       - name of the analysis
-            log_file_path       - path to the log file
-            output_folder_path  - output folder path
+            analysis_name: name of the analysis
+            log_file_path: path to the log file
+            output_folder_path: output folder path
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -44,8 +49,10 @@ class BaseAnalysis:
     @abstractmethod
     def execute(self, should_show):
         """Executes the specified analysis
+
         Args:
-            should_show - should plot results
+            should_show: should plot results
+
         Raises:
             None
         """

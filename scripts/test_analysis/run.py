@@ -30,10 +30,15 @@ class TestAnalysis(BaseAnalysis):
                  output_folder_path,
                  log_file_path):
         """Test Analysis
+
         Args:
-            dataset_csv_file_path   - absolute path to the csv file
-            output_folder_path      - output folder path
-            log_file_path           - path to the log file
+            dataset_csv_file_path: absolute path to the csv file
+            output_folder_path: output folder path
+            log_file_path: path to the log file
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -46,9 +51,14 @@ class TestAnalysis(BaseAnalysis):
 
     def run(self, analysis_name, should_show=True):
         """Run the analysis
+
         Args:
-            analysis_name - name of the analysis to run
-            should_show   - should show the plot
+            analysis_name: name of the analysis to run
+            should_show: should show the plot
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -63,7 +73,11 @@ class TestAnalysis(BaseAnalysis):
         """Executes the Test
 
         Args:
-            should_show - should plot results
+            should_show: should plot results
+
+        Returns:
+            None
+
         Raises:
             None
         """

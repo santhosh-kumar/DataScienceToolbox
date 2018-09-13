@@ -19,7 +19,11 @@ class TestLogger(TestCase):
         """setUp
 
         Args:
-            self - TestLogger
+            self: TestLogger
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -29,7 +33,11 @@ class TestLogger(TestCase):
         """tearDown
 
         Args:
-            self - TestLogger
+            self: TestLogger
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -43,7 +51,11 @@ class TestLogger(TestCase):
         """Test Create
 
         Args:
-            self - TestLogger
+            self: TestLogger
+
+        Returns:
+            None
+
         Raises:
             None
         """
@@ -59,7 +71,11 @@ class TestLogger(TestCase):
         """Test Trace
 
         Args:
-            self - TestLogger
+            self: TestLogger
+
+        Returns:
+            None
+
         Raises:
             None
         """

@@ -11,9 +11,14 @@ class Assertion:
     @staticmethod
     def is_true(statement, message=None):
         """Checks whether the statement is true, if not throws an exception
+
         Args:
-            statement - statement to be checked
-            message   - message for the exception
+            statement: statement to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -23,9 +28,14 @@ class Assertion:
     @staticmethod
     def is_string(variable, message=None):
         """Checks whether the variable is a string, if not throws an exception
+
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -35,9 +45,14 @@ class Assertion:
     @staticmethod
     def is_integer(variable, message=None):
         """Checks whether the variable is an integer, if not throws an exception
+
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -47,9 +62,14 @@ class Assertion:
     @staticmethod
     def is_positive_integer(variable, message=None):
         """Checks whether the variable is a positive integer, if not throws an exception
+
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -59,9 +79,14 @@ class Assertion:
     @staticmethod
     def is_non_negative_integer(variable, message=None):
         """Checks whether the variable is a non-negative integer, if not throws an exception
+
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -72,8 +97,12 @@ class Assertion:
     def is_array(variable, message=None):
         """Checks whether the variable is an array, if not throws an exception
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
@@ -83,9 +112,14 @@ class Assertion:
     @staticmethod
     def is_dict(variable, message=None):
         """Checks whether the variable is a dict, if not throws an exception
+
         Args:
-            variable  - variable to be checked
-            message   - message for the exception
+            variable: variable to be checked
+            message: message for the exception
+
+        Returns:
+            None
+
         Raises:
             AssertionException
         """
