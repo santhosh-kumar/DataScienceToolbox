@@ -56,4 +56,4 @@ class BaseAnalysis:
         Raises:
             None
         """
-        pass
+        raise NotImplementedError

@@ -42,7 +42,7 @@ class TestAnalysis(BaseAnalysis):
         Raises:
             None
         """
-        BaseAnalysis.__init__(self, self.ANALYSIS_NAME, log_file_path, output_folder_path)
+        super(__class__, self).__init__(self.ANALYSIS_NAME, log_file_path, output_folder_path)
 
         self.dataset_csv_file_path = os.path.abspath(dataset_csv_file_path)
         self.dataset = CsvDataset(dataset_csv_file_path, self.logger)

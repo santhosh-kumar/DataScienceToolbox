@@ -26,7 +26,7 @@ class Dataset:
         Raises:
             None
         """
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def get_field_names(self):
@@ -40,7 +40,7 @@ class Dataset:
         Raises:
             None
         """
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def get_field(self, field_name, field_dtype=np.str_):
@@ -55,4 +55,4 @@ class Dataset:
         Raises:
             None
         """
-        pass
+        raise NotImplementedError
